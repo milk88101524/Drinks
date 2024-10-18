@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+    @State private var selectedTab = 0
+    
+    init() {
+        applyNavigationBarBackground()
     }
+    
+    var body: some View {
+        LoginPage()
+    }
+}
+
+func applyNavigationBarBackground() {
+    let navigationAppearance = UINavigationBarAppearance()
+    navigationAppearance.configureWithTransparentBackground()
+    navigationAppearance.backgroundColor = UIColor(getBgColor())
+    navigationAppearance.shadowColor = .black
+    UINavigationBar.appearance().standardAppearance = navigationAppearance
+    UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
 }
 
 #Preview {
