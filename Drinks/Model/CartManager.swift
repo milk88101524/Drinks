@@ -10,7 +10,7 @@ import Foundation
 class CartManager {
     private var url = URL(string: "https://api.airtable.com/v0/appWGfuE25modmD0d/Drinks")!
     private var request: URLRequest
-    private var AIRTABLE_API_KEY = "patyjW8yHd1cIRrxQ.4ee43e8302ed9be89bb00ed74339af553528828a171ad4d79552b6149cc295af"
+    private var AIRTABLE_API_KEY = "api_key"
     
     init() {
         self.request = URLRequest(url: url)
